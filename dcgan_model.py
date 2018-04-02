@@ -102,18 +102,18 @@ Function to model the loss for both generator and discriminator. Returns the gen
 """       
     def model_loss(self,input_real,input_z,out_channel_dim):
         
-	   """
-	   Images from the dataset are labelled with label = 0.9 for better training
-	   """	
+	"""
+	Images from the dataset are labelled with label = 0.9 for better training
+	"""	
         label_smooth = 0.9 
         
         #get output of generator
         gen_img, gen_logits = self.generator(input_z,out_channel_dim,True)
 
-	   #pass real image to dicriminator
+	#pass real image to dicriminator
         disc_model_real, disc_logits_real = self.discriminator(input_real)
 	
-	   #pass generated image to dicriminator
+	#pass generated image to dicriminator
         disc_model_fake, disc_logits_fake = self.discriminator(gen_img,reuse=True)
             
 	   	
@@ -121,15 +121,15 @@ Function to model the loss for both generator and discriminator. Returns the gen
         disc_loss_fake = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=disc_logits_fake,labels=tf.zeros_like(disc_model_fake)))
         
 
-	    """
-	    Loss for discriminator is sum of loss for real image and fake image 
-	    """	
+	"""
+	Loss for discriminator is sum of loss for real image and fake image 
+	"""	
         disc_loss = disc_loss_real + disc_loss_fake
         
 
         """
-	    To find loss for generator, fake image is passed with label= real (0.9)
-	    """
+	To find loss for generator, fake image is passed with label= real (0.9)
+	"""
         gen_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=disc_logits_fake,labels=label_smooth*tf.ones_like(disc_model_fake)))
         
         return disc_loss,gen_loss,gen_img
