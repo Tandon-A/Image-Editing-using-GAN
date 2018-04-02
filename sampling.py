@@ -19,10 +19,10 @@ with tf.Graph().as_default() as g:
       net = DCGAN(shape,z_dim,lr_rate,beta1,alpha)
       saver = tf.train.Saver()
 	  
-	  #change second argument of restore function to the path where weights and .meta file is stored
+      #change second argument of restore function to the path where weights and .meta file is stored
       saver.restore(sess,model_dir+"try_2_0_upd\\")
 	  
-	  #creating an embedding of size 1x100 to sample the generator 
+      #creating an embedding of size 1x100 to sample the generator 
       example_z = np.random.uniform(-1,1,size=[1,z_dim])    
       img = sess.run(net.output_gen,feed_dict={net.input_z:example_z})
       img = np.reshape(img,(64,64,3))
@@ -33,7 +33,7 @@ with tf.Graph().as_default() as g:
       plt.imshow(img)
       plt.show()
 	  
-	  #to print all the variables in the graph 
+      #to print all the variables in the graph 
       """
       for v in tf.all_variables():
           print (v.op.name + " ")
