@@ -11,14 +11,14 @@ from dcgan_model import DCGAN
 #Function to get image from path and rescale them to [-1,1]
 def get_image_new(image_path,width,height):
     image = Image.open(image_path)
-	#Resizing image to smaller size -- 64 x 64 generally  
+    #Resizing image to smaller size -- 64 x 64 generally  
     image = image.resize([width,height],Image.BILINEAR)
-	#crop image to reduce clutter 
-	image = image.crop((30,40,168,178))
+    #crop image to reduce clutter 
+    image = image.crop((30,40,168,178))
     image = np.array(image,dtype=np.float32)	
     image = np.divide(image,255)
     image = np.subtract(image,0.5)
-	#scaling image to [-1,1]
+    #scaling image to [-1,1]
     image = np.multiply(image,2)
     return np.array(image)
 
