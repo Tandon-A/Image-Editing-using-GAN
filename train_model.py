@@ -78,7 +78,7 @@ alpha = 0.2
 max_iter = 25
 
 """
-Change data_files to loca where database is saved. CelebA Face Database is used in this project. 
+Change data_files to location where database is saved. CelebA Face Database is used in this project. 
 """
 data_files = glob("D:\\Abhishek_Tandon\\sop_dl\\dataset\\img\\img_align_celeba\\*.jpg")
 shape = len(data_files),64,64,3
