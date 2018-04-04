@@ -11,10 +11,10 @@ from dcgan_model import DCGAN
 #Function to get image from path and rescale them to [-1,1]
 def get_image_new(image_path,width,height):
     image = Image.open(image_path)
-    #Resizing image to smaller size -- 64 x 64 generally  
-    image = image.resize([width,height],Image.BILINEAR)
     #crop image to reduce clutter 
     image = image.crop((30,40,168,178))
+    #Resizing image to smaller size -- 64 x 64 generally  
+    image = image.resize([width,height],Image.BILINEAR)
     image = np.array(image,dtype=np.float32)	
     image = np.divide(image,255)
     image = np.subtract(image,0.5)
@@ -69,7 +69,7 @@ def train(net,max_iter,batch_size,data_files,lr_rate,beta1,shape,z_dim):
                 step = step +1 
                     
 #Change model_dir to location where you want to save model weights                    
-model_dir = "D:\\Abhishek_Tandon\\sop_dl\\model\\dcgan\\tf\\model\\"
+model_dir = "dcgan\\tf\\model\\"
 batch_size = 64
 z_dim = 100
 lr_rate = 0.0002
@@ -80,7 +80,7 @@ max_iter = 25
 """
 Change data_files to location where database is saved. CelebA Face Database is used in this project. 
 """
-data_files = glob("D:\\Abhishek_Tandon\\sop_dl\\dataset\\img\\img_align_celeba\\*.jpg")
+data_files = glob("dataset\\img\\img_align_celeba\\*.jpg")
 shape = len(data_files),64,64,3
 tf.reset_default_graph()
 
