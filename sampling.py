@@ -5,8 +5,8 @@ import numpy as np
 import matplotlib.pyplot as plt 
 
 
-#Change model_dir to location where you want to save model weights 
-model_dir = "D:\\Abhishek_Tandon\\sop_dl\\model\\dcgan\\tf\\model\\"
+#Change model_dir to location of parent directory of model weights 
+model_dir = "dcgan\\tf\\model\\"
 z_dim = 100
 lr_rate = 0.0002
 beta1 = 0.5
