@@ -23,6 +23,10 @@ Sampling through epochs during training.
 ![epoch 7](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/DCGAN/assets/7_1.png "Epoch 7")
 ![epoch 8](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/DCGAN/assets/8_1.png "Epoch 8")
 
+### Results after 6th epoch 
+
+![epoch 6 big](https://github.com/Tandon-A/Image-Editing-using-GAN/tree/master/DCGAN/assets/6_big.png "Generated Samples after 6th Epoch")
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/LICENSE) file for details
