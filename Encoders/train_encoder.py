@@ -78,7 +78,7 @@ def train(en_net,max_iter,batch_size,data_files,lr_rate,beta1,shape,z_dim):
 #Change dcgan_model_dir to parent directory where weights of DCGAN model are saved.                     
 dcgan_model_dir = "DCGAN\\model_weights\\"
 #Change encoder_model_dir to directory where you want to save the encoder model weights. 
-encoder_model_dir = "D:\\Abhishek_Tandon\\sop_dl\\model\\encoders\\model\\l2\\"
+encoder_model_dir = "Encoders\\model\\l2\\"
 
 batch_size = 64
 z_dim = 100
