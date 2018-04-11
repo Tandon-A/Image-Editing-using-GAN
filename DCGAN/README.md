@@ -13,19 +13,14 @@ Tensorflow implementation of DCGAN following this [paper](https://arxiv.org/abs/
 ## Results 
 Sampling through epochs during training. 
 
-![epoch 0](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/DCGAN/assets/0_1.png "Epoch 0")
-![epoch 1](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/DCGAN/assets/1_1.png "Epoch 1")
-![epoch 2](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/DCGAN/assets/2_1.png "Epoch 2")
-![epoch 3](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/DCGAN/assets/3_1.png "Epoch 3")
-![epoch 4](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/DCGAN/assets/4_1.png "Epoch 4")
-![epoch 5](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/DCGAN/assets/5_1.png "Epoch 5")
-![epoch 6](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/DCGAN/assets/6_1.png "Epoch 6")
-![epoch 7](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/DCGAN/assets/7_1.png "Epoch 7")
-![epoch 8](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/DCGAN/assets/8_1.png "Epoch 8")
+![Run 1](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/DCGAN/assets/run1_gif.gif "Generated Samples from epoch 0 to epoch 8 - Run1")
+
+![Run 2](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/DCGAN/assets/run2_gif.gif "Generated Samples from epoch 0 to epoch 8 - Run2")
 
 ### Results after 6th epoch 
 
-![epoch 6 big](https://github.com/Tandon-A/Image-Editing-using-GAN/tree/master/DCGAN/assets/6_big.png "Generated Samples after 6th Epoch")
+![epoch 6 big](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/DCGAN/assets/6_run.png "Generated Samples after 6th Epoch")
+
 
 ## License
 
