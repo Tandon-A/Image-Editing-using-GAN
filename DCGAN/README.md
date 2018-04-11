@@ -2,6 +2,8 @@
 
 Tensorflow implementation of DCGAN following this [paper](https://arxiv.org/abs/1511.06434). Referenced torch code can be found [here](https://github.com/soumith/dcgan.torch).
 
+<img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/DCGAN/assets/DCGAN.png" width="800" alt="Generated Samples after 6th Epoch">
+
 ## Prerequisites
 
 * Python 3.3+
@@ -19,7 +21,7 @@ Sampling through epochs during training.
 
 ### Results after 6th epoch 
 
-![epoch 6 big](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/DCGAN/assets/6_run.png "Generated Samples after 6th Epoch")
+<img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/DCGAN/assets/6_run.png" width="500" alt="Generated Samples after 6th Epoch">
 
 
 ## License
