@@ -11,9 +11,9 @@ The objective is to have answers to questions such as -
 
 ### Deep Convolutional Generative Adversarial Network (DCGAN) 
 
-Provided implementation of DCGAN model in tensorflow. [Read here](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/DCGAN/README.md)
+Provided implementation of DCGAN model in tensorflow. [Read here](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/DCGAN/)
 
-Trained an encoder model(DeepConv Encoder) on top of the DCGAN model to encode an image and then pass it to the geneartor to produce image which is same as that of the input image. [Read here](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/Encoders/README.md)
+Trained an encoder model(DeepConv Encoder) on top of the DCGAN model to encode an image and then pass it to the geneartor to produce image which is same as that of the input image. [Read here](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/Encoders/)
 
 Used the Encoder-Generator model to manipulate images to have desired attributes. 
 
