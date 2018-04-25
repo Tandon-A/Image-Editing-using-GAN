@@ -34,8 +34,24 @@ Used the Encoder-Generator model to manipulate images to have desired attributes
 
 
 
-### Other Models
-Work in progress. 
+### Cycle Consistent Adversarial Networks (CycleGAN)
+
+Provided implementation of CycleGAN model in tensorflow. [Read here](https://github.com/Tandon-A/Image-Editing-using-GAN/blob/master/CycleGAN/)
+
+Trained the model on Monet-Photo Database and Summer-Winter Database. (with increased training images per epoch)
+
+#### Monet Paintings to Photo 
+
+| Input Image | Output Image | Input Image | Output Image | Input Image | Output Image | 
+|:-----------:|:------------:|:-----------:|:------------:|:-----------:|:------------:|
+![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/orgA2.png)  |  ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/realA2.png) | ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/orgA13.png) | ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/realA13.png) | ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/orgA21.png) | ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/realA21.png) 
+
+#### Photo to Monet Paintings 
+
+| Input Image | Output Image | Input Image | Output Image | Input Image | Output Image | 
+|:-----------:|:------------:|:-----------:|:------------:|:-----------:|:------------:|
+![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/orgB2.png)  |  ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/monetB2.png) | ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/orgB15.png) | ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/monetB15.png) | ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/orgB26.png) | ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/monetB26.png) 
+
 
 ## Author 
 
