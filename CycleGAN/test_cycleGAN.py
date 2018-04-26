@@ -22,7 +22,7 @@ def get_image_new(image_path,width,height):
 
 
 """
-Function to test CycleGAN fro first ten images from test set.
+Function to test CycleGAN for first ten images from test set.
 """
 def test(cgan_net,testA,testB):
     with tf.Session() as sess:
