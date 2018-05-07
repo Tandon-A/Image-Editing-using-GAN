@@ -14,6 +14,33 @@ Tensorflow implementation of DeepConv Encoder as presented in the paper - [Photo
 * matplotlib 
 * (Optional) [CelebA Face Database](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html): Large Scale Face database used for training the model 
 
+## Usage 
+
+To train the Encoder model:
+```
+> python train_encoder.py --data_path celeba --input_fname_ppatern .jpg --dcgan_model_dir dcgan_model --encoder_dir encoder_model
+```
+* data_path: Directory of the database folder having training images
+* input_fname_pattern: Glob pattern of training images
+* dcgan_model_dir: DCGAN model directory having model weights
+* encoder_dir: Encoder directory to save checkpoints
+
+To compute attribute encodings: 
+```
+> python average.py --data_path celeba --input_fname_ppatern .jpg --encoder_dir encoder_model --attribute_file attr_labels.txt --attr_encoding_file attr_embed.txt
+```
+* data_path: Directory of the database folder having training images
+* input_fname_pattern: Glob pattern of training images
+* encoder_dir: Encoder directory to save checkpoints
+* attribute_file: Label file of the database
+* attr_encoding_file: File to save attribute encodings  
+
+
+To manipulate images:
+```
+> python manipulate.py --data_path celeba --input_fname_ppatern .jpg --encoder_dir encoder_model --attribute_file attr_labels.txt --attr_encoding_file attr_embed.txt
+```
+
 ## Results 
 Results of encoder model after 6th epoch. 
 
