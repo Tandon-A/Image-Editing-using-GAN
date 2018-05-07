@@ -22,7 +22,7 @@ def get_image_new(image_path,width,height):
     image = np.subtract(image,0.5)
     #scaling image to [-1,1]
     image = np.multiply(image,2)    
-    return np.array(image)
+    return image
 
 """
 Train Encoder. Uses trained Generator of DCGAN model. 
