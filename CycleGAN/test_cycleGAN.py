@@ -69,7 +69,7 @@ def main(_):
 
 flags = tf.app.flags
 flags.DEFINE_string("testA_image",None,"TestA Image Path")
-flags.DEFINE_string("testB_image",None,"TestB Imae Path")
+flags.DEFINE_string("testB_image",None,"TestB Image Path")
 flags.DEFINE_string("model_dir",None,"Directory name to save checkpoints")
 flags.DEFINE_string("images_dir","images_dir","Directory where images sampled from the generator (while testing the model) are stored")
 FLAGS = flags.FLAGS
