@@ -13,6 +13,29 @@ Tensorflow implementation of CycleGAN following this [paper](https://arxiv.org/a
 * (Optional) [Monet-Photo Database](https://people.eecs.berkeley.edu/~taesung_park/CycleGAN/datasets/monet2photo.zip)
 * (Optional) [Summer-Winter Yosemite Database](https://people.eecs.berkeley.edu/~taesung_park/CycleGAN/datasets/summer2winter_yosemite.zip)
 
+## Usage
+
+To train the model:
+```
+> python train_cycleGAN.py --data_path monet2photo --input_fname_pattern .jpg --model_dir cycleGAN_model --sampled_images_dir train_image_dir
+```
+* data_path: Path to parent directory of trainA and trainB folder
+* input_fname_pattern: Glob pattern of training images
+* model_dir: Directory name to save checkpoints
+* sampled_images_dir: Directory where images sampled from the generator (while training the model) are stored  
+
+
+To test the model:
+```
+> python test_cycleGAN.py --testA_image A01.jpg --testB_image B01.jpg --model_dir cycleGAN_model --sampled_imaes_dir test_image_dir
+```
+* testA_image: TestA Image Path
+* testB_image: TestB Image Path 
+* model_dir: Path to checkpoint folder
+* sampled_images_dir: Directory where images sampled from the generator (while testing the model) are stored
+
+
+
 ## Results 
 Trained CycleGAN model on Monet-Photo Database and Summer-Winter Yosemite Database. 
 
