@@ -46,7 +46,7 @@ def main(_):
 
 
 flags = tf.app.flags
-flags.DEFINE_string("model_dir","dcgan_model","Directory to load model weights")
+flags.DEFINE_string("model_dir","dcgan_model","Model weights directory")
 flags.DEFINE_string("sampled_dir","sampled_images","Directory where images sampled from the generator (while testing the model) are stored")
 FLAGS = flags.FLAGS
     
