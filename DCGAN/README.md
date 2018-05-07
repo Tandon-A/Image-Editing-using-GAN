@@ -12,6 +12,27 @@ Tensorflow implementation of DCGAN following this [paper](https://arxiv.org/abs/
 * matplotlib 
 * (Optional) [CelebA Face Database](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html): Large Scale Face database used for training the model 
 
+
+## Usage 
+
+To train the model: 
+```
+ > python train_model.py --data_path celeba --input_fname_pattern .jpg --model_dir dcgan_model --sampled_images_dir gen_images_train
+```
+* data_path: Directory of the database folder having training images
+* input_fname_pattern: Glob pattern of training images
+* model_dir: Directory path to save checkpoints
+* sampled_images_dir: Directory where images sampled from the generator (while training the model) are stored  
+
+
+To test a trained model: 
+```
+> python sampling.py --model_dir dcgan_model\try_6 --sampled_dir gen_images_test
+```
+* model_dir: Model weights directory
+* sampled_dir: Directory where images sampled from the generator (while testing the model) are stored
+
+
 ## Results 
 Sampling through epochs during training. 
 
