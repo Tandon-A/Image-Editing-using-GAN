@@ -7,7 +7,7 @@ Tensorflow implementation of CycleGAN following this [paper](https://arxiv.org/a
 ## Prerequisites
 
 * Python 3.3+
-* Tensorflow 
+* Tensorflow 1.6
 * pillow (PIL)
 * matplotlib 
 * (Optional) [Monet-Photo Database](https://people.eecs.berkeley.edu/~taesung_park/CycleGAN/datasets/monet2photo.zip)
