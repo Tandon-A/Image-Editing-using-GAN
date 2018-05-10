@@ -12,10 +12,10 @@
 Yes we all have been clicking a lot of photographs, and though there's a plethora of features available in today’s image editing applications, it is time to imagine what the ‘next generation of image editing tools’ would be like. These new tools would allow users to edit an image to have a desired attribute or feature such as 'add a hat' or 'change hair color', to create new images. 
 
 
-To make this possible, we need an algorithm which can learn different features of an image, edit them as per required and then generate a new image. Generative Adversarial Networks or GANs developed by Ian Goodfellow [1] do a pretty good job of generating new images and have been used to develop such a next generation image editing tool.
+To make this possible, we need an algorithm which can learn different features of an image, edit them as required and then generate a new image. Generative Adversarial Networks or GANs developed by Ian Goodfellow [1] do a pretty good job of generating new images and have been used to develop such a next generation image editing tool.
 
 
-GANs a class of deep learning models, consist of a __generator__ and a __discriminator__ which are pitched against each other. The generator is tasked to produce images which are similar to the database while the discriminator tries to distinguish between the generated image and the real image from the database. This conflicting interplay eventually trains the GAN and fools the discriminator into thinking of the generated images as ones coming from the database. For a simplified tutorial on GANs refer [this](http://blog.aylien.com/introduction-generative-adversarial-networks-code-tensorflow/). 
+GANs, a class of deep learning models, consist of a __generator__ and a __discriminator__ which are pitched against each other. The generator is tasked to produce images which are similar to the database while the discriminator tries to distinguish between the generated image and the real image from the database. This conflicting interplay eventually trains the GAN and fools the discriminator into thinking of the generated images as ones coming from the database. For a simplified tutorial on GANs refer [this](http://blog.aylien.com/introduction-generative-adversarial-networks-code-tensorflow/). 
 
 
 In this post, I would go through the process of using a GAN for the image editing task. 
@@ -23,9 +23,9 @@ In this post, I would go through the process of using a GAN for the image editin
 
 ## Pairing DCGAN with Encoder 
 
-Deep Convolutional Generative Adversarial Networks (DCGAN) as proposed by Radford [2] uses strategies to better train GAN. In this work, I have implemented the DCGAN model for this task. I have used the CelebA Face Database [3] which has 200,000+ images of celebrities with over 40 labeled attributes such as smiling, wavy hair, moustache etc.
+Deep Convolutional Generative Adversarial Network (DCGAN) as proposed by Radford [2] uses strategies to better train GAN. In this work, I have implemented the DCGAN model for this task. I have used the CelebA Face Database [3] which has 200,000+ images of celebrities with over 40 labeled attributes such as smiling, wavy hair, moustache etc.
 
-The generator of the DCGAN model takes in a vector of 100 dimensions also known as z-vector and converts this into an image similar to the images present in the database. While training, the generator learns to represent this z-vector into a facial image accounting for all the attributes. Some of the generated images after sampling the generator are shown below. Follow this link for the DCGAN [code](https://github.com/Tandon-A/Image-Editing-using-GAN/tree/master/DCGAN).
+The generator of the DCGAN model takes in a vector of 100 dimensions, also known as z-vector and converts this into an image similar to the images present in the database. While training, the generator learns to represent this z-vector into a facial image accounting for all the attributes. Some of the generated images after sampling the generator are shown below. Follow this link for the DCGAN [code](https://github.com/Tandon-A/Image-Editing-using-GAN/tree/master/DCGAN).
 
 <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/DCGAN/assets/6_run.png" width="400" alt="Generated Samples after 6th Epoch">
 
@@ -85,7 +85,7 @@ To find the representation of different attributes, all database images are pass
 
 ## CycleGAN
 
-Cycle Consistent Generative Adversarial Networks (CycleGANs) [4] were developed to solve the problem of unpaired image to image translation, mapping images from one domain to the other domain in an unsupervised manner. 
+Cycle Consistent Generative Adversarial Networks (CycleGANs) [4] were developed to solve the problem of unpaired image-to-image translation, mapping images from one domain to the other domain in an unsupervised manner. 
 
 The CycleGAN model is made up of two GANs which train in a fashion similar to that of DCGAN, but they use an extra ‘cyclic loss’ term to account for the cycle consistency between the input image and the generated sample. 
 
