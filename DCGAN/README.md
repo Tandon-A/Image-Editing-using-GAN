@@ -7,7 +7,7 @@ Tensorflow implementation of DCGAN following this [paper](https://arxiv.org/abs/
 ## Prerequisites
 
 * Python 3.3+
-* Tensorflow 
+* Tensorflow 1.6
 * pillow (PIL)
 * matplotlib 
 * (Optional) [CelebA Face Database](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html): Large Scale Face database used for training the model 
