@@ -65,6 +65,11 @@ The encoder produces an encoding or a z-vector of the input image. This latent r
 
 To find the representation of different attributes, all database images are passed through the encoder. The average encoding of all the images which don’t have a particular attribute is then subtracted from the average encoding of the ones which do. For example – To compute the representation of ‘smiling’, all images are first encoded. Now, let the average encoding of images having the attribute ‘smiling’ be ‘s’ and the average encoding of all images not having that attribute be ‘ns’. Then the z-vector for smiling becomes, z = s – ns. 
 
+<img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/assets/mainpulate.png" width="500" alt="Manipulate Images">
+
+##### Figure 6: _Adding Attribute 'Pale Skin'_
+ 
+ 
 
 | Orignal Image            |  Encoded Image  | Smiling  |  Bushy Eyebrows  | Mustache   | Wavy Hair|
 :-------------------------:|:---------------:|:--------:|:----------------:|:----------:|:--------:|
@@ -75,11 +80,7 @@ To find the representation of different attributes, all database images are pass
 :-------------------------:|:---------------:|:--------:|:----------------:|:----------:|:--------:|
 ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/Encoders/assets/ex5/data.png)  |  ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/Encoders/assets/ex5/en_gen.png) | ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/Encoders/assets/ex5/male_gen.png) | ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/Encoders/assets/ex5/high_cheekbones_gen.png) | ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/Encoders/assets/ex5/blond_hair_gen.png) | ![](https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/Encoders/assets/ex5/bangs_gen.png)
 
-| Orignal Image            |  Encoded Image  | Smiling  |  Bushy Eyebrows  | Mustache   | Wavy Hair|
-:-------------------------:|:---------------:|:--------:|:----------------:|:----------:|:--------:|
-<img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/Encoders/assets/ex4/data.png" width = "150" alt="Summer 1">|  <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/Encoders/assets/ex4/en_gen.png" width = "150" alt="Summer 1">| <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/Encoders/assets/ex4/smiling_gen.png" width = "150" alt="Summer 1">| <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/Encoders/assets/ex4/bushy_eyebrows_gen.png" width = "150" alt="Summer 1"> |  <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/Encoders/assets/ex4/mustache_en.png" width = "150" alt="Summer 1">| <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/Encoders/assets/ex4/wavy_hair_gen.png" width = "150" alt="Summer 1"> 
-
-##### Figure 6: _Manipulation Samples_
+##### Figure 7: _Manipulation Samples_
 
 
 ## CycleGAN
@@ -90,7 +91,7 @@ The CycleGAN model is made up of two GANs which train in a fashion similar to th
 
 <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/CycleGAN_working.png" width="500" alt="CycleGAN model">
 
-##### Figure 7: _CycleGAN working_
+##### Figure 8: _CycleGAN working_
 
 Image from one domain is passed to the model which converts this to an image of the other domain. This generated sample is then converted back to the first domain to maintain the cyclic nature. My implementation the CycleGAN model is available [here](https://github.com/Tandon-A/Image-Editing-using-GAN/tree/master/CycleGAN). For a tutorial on CycleGAN refer [this](https://hardikbansal.github.io/CycleGANBlog/). Below are some samples generated usin CycleGAN. 
 
@@ -101,7 +102,7 @@ Image from one domain is passed to the model which converts this to an image of 
 <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/sw_250_200/sumA21.png" width = "150" alt="Summer 1">| <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/sw_250_200/wintA21.png" width = "150" alt="Winter 1"> | 
 <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/sw_250_200/sumA26.png" width = "150" alt="Summer 2">| <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/sw_250_200/wintA26.png" width = "150" alt="Winter 2">
 
-##### Figure 8.1: _Summer to Winter Yosemtie_
+##### Figure 9.1: _Summer to Winter Yosemtie_
 
 
 | Input Image | Output Image |
@@ -109,7 +110,7 @@ Image from one domain is passed to the model which converts this to an image of 
 <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/sw_250_200/wintB16.png" width = "150" alt="Winter 1">|  <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/sw_250_200/sumB16.png" width = "150" alt="Summer 1"> | 
 <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/sw_250_200/wintB17.png" width = "150" alt="Winter 2"> | <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/sw_250_200/sumB17.png" width = "150" alt="Summer 2"> 
 
-##### Figure 8.2: _Winter to Summer Yosemtie_
+##### Figure 9.2: _Winter to Summer Yosemtie_
 
 #### Training CycleGAN on Photo-Monet Paintings Database
 
@@ -118,7 +119,7 @@ Image from one domain is passed to the model which converts this to an image of 
 <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/orgA2.png" width = "150" alt="Photo 1"> |  <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/realA2.png" width = "150" alt="Monet 1"> |
 <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/orgA21.png" width = "150" alt="Photo 2"> | <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/realA21.png" width = "150" alt="Monet 2"> 
 
-##### Figure 9.1: _Monet Paintings to Photo_
+##### Figure 10.1: _Monet Paintings to Photo_
 
 
 | Input Image | Output Image |
@@ -126,7 +127,7 @@ Image from one domain is passed to the model which converts this to an image of 
 <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/orgB2.png" width = "150" alt="Monet 1"> | <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/monetB2.png" width = "150" alt="Photo 1">| 
 <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/orgB26.png" width = "150" alt="Monet 2"> | <img src="https://raw.githubusercontent.com/Tandon-A/Image-Editing-using-GAN/master/CycleGAN/assets/monet_250_200/monetB26.png" width = "150" alt="Photo 2">
 
-##### Figure 9.2: _Photo to Monet Paintings_
+##### Figure 10.2: _Photo to Monet Paintings_
 
 Thanks for reading. 
 
