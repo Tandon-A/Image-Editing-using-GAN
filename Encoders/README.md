@@ -9,7 +9,7 @@ Tensorflow implementation of DeepConv Encoder as presented in the paper - [Photo
 ## Prerequisites
 
 * Python 3.3+
-* Tensorflow 
+* Tensorflow 1.6
 * pillow (PIL)
 * matplotlib 
 * (Optional) [CelebA Face Database](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html): Large Scale Face database used for training the model 
